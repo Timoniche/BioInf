@@ -4,6 +4,16 @@
 
 **swap number** - count of random swaps to mix an array
 
-swaps = 100
+swaps = *100*
 
-![alt text](https://github.com/Timoniche/BioInf/blob/main/size100)
+![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/size100)
+
+swaps = *1000*
+
+![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/size1000)
+
+swaps = *10000*
+
+![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/size10000)
+
+
