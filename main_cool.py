@@ -3,7 +3,6 @@ from cool.CoolerProcessor import process_cool
 
 def main():
     process_cool(filepath)
-    print('Hello!')
 
 
 if __name__ == '__main__':
