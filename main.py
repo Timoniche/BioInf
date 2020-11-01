@@ -12,7 +12,7 @@ def break2(data):
 
 
 def main():
-    n = 10000
+    n = 100
     data = [i for i in range(1, n + 1)]
     # print(data)
     xs = [i for i in range(1, n + 1)]
