@@ -71,9 +71,15 @@ def dispersion_avg_on_k(mat, k):
     return dispersion
 
 
+"""
+Pre: k < len(matrix)
+"""
+
+
 def process_cool(filepath, k=10):
     c = cooler.Cooler(filepath)
     mat = c.matrix(balance=False)[:, :]
+    assert k < len(mat), "k should be < len(matrix)"
     expec = expected_avg_on_k(mat, k)
     disp = dispersion_avg_on_k(mat, k)
     sigma = sqrt(disp)
@@ -84,4 +90,3 @@ def process_cool(filepath, k=10):
     print('3-sigma rule:')
     print('with >= 8/9 probability (i,j) blocks have')
     print(f'[{max(0, expec - 3 * sigma)}; {expec + 3 * sigma}] connections')
-
