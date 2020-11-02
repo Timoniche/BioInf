@@ -1,5 +1,6 @@
 from math import sqrt
 
+import logging
 import cooler
 
 """
@@ -77,16 +78,19 @@ Pre: k < len(matrix)
 
 
 def process_cool(filepath, k=10):
+    logging.basicConfig(filename="logs/cooler.log", level=logging.INFO)
     c = cooler.Cooler(filepath)
     mat = c.matrix(balance=False)[:, :]
-    assert k < len(mat), "k should be < len(matrix)"
+    assert len(mat) > k > 0, "k should be in ( 0 ; len(matrix) )"
     expec = expected_avg_on_k(mat, k)
     disp = dispersion_avg_on_k(mat, k)
     sigma = sqrt(disp)
-    print(f'k := {k}')
-    print(f'EX = {expec}')
-    print(f'DX = {disp}')
-    print(f'SIGMA = {sigma}')
-    print('3-sigma rule:')
-    print('with >= 8/9 probability (i,j) blocks have')
-    print(f'[{max(0, expec - 3 * sigma)}; {expec + 3 * sigma}] connections')
+    logging.info('k is r(i, j): such points as (i, i + k), (i, i - k)')
+    logging.info(f'k := {k}')
+    logging.info(f'EX = {expec}')
+    logging.info(f'DX = {disp}')
+    logging.info(f'SIGMA = {sigma}')
+    logging.info('3-sigma rule:')
+    logging.info('with >= 8/9 probability (i,j) blocks have')
+    logging.info(f'[{max(0, expec - 3 * sigma)}; {expec + 3 * sigma}] connections')
+    return sigma
