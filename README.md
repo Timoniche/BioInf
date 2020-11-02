@@ -7,17 +7,25 @@
 
 **swap number** - count of random swaps to mix an array
 
+n = *100*
 swaps = *100*
 
-![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/size100)
+![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/size100swaps100)
 
+n = *100*
+swaps = *500*
+
+![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/size100swaps500)
+
+n = *1000*
 swaps = *1000*
 
-![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/size1000)
+![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/size1000swaps1000)
 
+n = *10000*
 swaps = *10000*
 
-![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/size10000)
+![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/size10000swaps10000)
 
 ## Part 2
 *Cooler API*
