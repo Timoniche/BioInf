@@ -27,6 +27,11 @@ swaps = *10000*
 
 ![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/size10000swaps10000)
 
+sigma(k)
+k = [10, 25]
+
+![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/k10to25)
+
 ## Part 2
 *Cooler API*
 

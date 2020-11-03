@@ -35,8 +35,8 @@ def main():
         logging.info(f'step: {i + 1}, cnt: {cnt}')
         delta_dists.append(i + 1 - d)
     plt.plot(xs, real_dists, color='red')
-    # plt.plot(xs, delta_dists, color='green')
-    # plt.plot(xs, cnt_cycles, color='black')
+    plt.plot(xs, delta_dists, color='green')
+    plt.plot(xs, cnt_cycles, color='black')
     plt.show()
 
 
