@@ -6,8 +6,9 @@ import matplotlib.pyplot as plt
 def main():
     # max = 6207
     sigmas = []
-    ks = [k for k in range(10, 25)]
-    for k in range(10, 25):
+    rng_k = range(10, 12)
+    ks = [k for k in rng_k]
+    for k in rng_k:
         sigmas.append(process_cool(filepath, k))
     plt.title('sigma(k)')
     plt.xlabel('k')

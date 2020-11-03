@@ -3,6 +3,16 @@ from math import sqrt
 import logging
 import cooler
 
+
+def check_symmetry(mtx):
+    n = len(mtx)
+    for i in range(n):
+        for j in range(n):
+            if mtx[i][j] != mtx[j][i]:
+                return False
+    return True
+
+
 """
 k := 1
 00000
@@ -81,6 +91,7 @@ def process_cool(filepath, k=10):
     logging.basicConfig(filename="logs/cooler.log", level=logging.INFO)
     c = cooler.Cooler(filepath)
     mat = c.matrix(balance=False)[:, :]
+    logging.info(f'symmetry: {check_symmetry(mat)}')
     assert len(mat) > k > 0, "k should be in ( 0 ; len(matrix) )"
     expec = expected_avg_on_k(mat, k)
     disp = dispersion_avg_on_k(mat, k)

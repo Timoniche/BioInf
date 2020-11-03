@@ -9,6 +9,9 @@ class TestCase(unittest.TestCase):
         self.assertEqual(d_min_swap(arr), 2)
         arr = [8, 9, 16, 15]
         self.assertEqual(d_min_swap(arr), 1)
+        arr = [2, 4, 1, 5, 3]
+        self.assertEqual(d_min_swap(arr), 4)
+
 
 
 if __name__ == '__main__':

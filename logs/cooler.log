@@ -1,0 +1,27 @@
+INFO:root:symmetry: True
+INFO:root:k is r(i, j): such points as (i, i + k), (i, i - k)
+INFO:root:k := 10
+INFO:root:EX = 642.8960787477812
+INFO:root:DX = 245000.9319145899
+INFO:root:SIGMA = 494.97568820558234
+INFO:root:3-sigma rule:
+INFO:root:with >= 8/9 probability (i,j) blocks have
+INFO:root:[0; 2127.8231433645283] connections
+INFO:root:symmetry: True
+INFO:root:k is r(i, j): such points as (i, i + k), (i, i - k)
+INFO:root:k := 10
+INFO:root:EX = 642.8960787477812
+INFO:root:DX = 245000.9319145899
+INFO:root:SIGMA = 494.97568820558234
+INFO:root:3-sigma rule:
+INFO:root:with >= 8/9 probability (i,j) blocks have
+INFO:root:[0; 2127.8231433645283] connections
+INFO:root:symmetry: True
+INFO:root:k is r(i, j): such points as (i, i + k), (i, i - k)
+INFO:root:k := 11
+INFO:root:EX = 587.7006132989026
+INFO:root:DX = 210381.8950351306
+INFO:root:SIGMA = 458.67406187305886
+INFO:root:3-sigma rule:
+INFO:root:with >= 8/9 probability (i,j) blocks have
+INFO:root:[0; 1963.7227989180792] connections
