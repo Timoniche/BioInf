@@ -40,7 +40,7 @@ data in this project:
 `
 Plots:
 
-range k = 1..10
+range k = *1..10*
 
 **E**(k)
 
@@ -53,3 +53,17 @@ range k = 1..10
 **SIGMA**(k)
 
 ![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/chr1_SIGMA_k_1_10)
+
+range k = *10..25*
+
+**E**(k)
+
+![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/chr1_EX_k_10_25)
+
+**D**(k)
+
+![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/chr1_DX_k_10_25)
+
+**SIGMA**(k)
+
+![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/chr1_SIGMA_k_10_25)

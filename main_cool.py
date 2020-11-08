@@ -45,10 +45,10 @@ def theory():
         ex_disp_sigma.append(process_cool(contact_matrix, k))
     plt.title('chr 1: SIGMA(k)')
     plt.xlabel('k')
-    plt.ylabel('SIGMA')
-    plt.plot(ks, [row[0] for row in ex_disp_sigma], color='red')
+    plt.ylabel('SIGMA(k)')
+    # plt.plot(ks, [row[0] for row in ex_disp_sigma], color='red')
     # plt.plot(ks, [row[1] for row in ex_disp_sigma], color='green')
-    # plt.plot(ks, [row[2] for row in ex_disp_sigma], color='blue')
+    plt.plot(ks, [row[2] for row in ex_disp_sigma], color='blue')
     plt.show()
 
 
