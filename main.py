@@ -14,7 +14,7 @@ def swap2(data):
 
 
 def main():
-    logging.basicConfig(filename="logs/permut.log", level=logging.INFO)
+    logging.basicConfig(filename='logs/permut.log', filemode='w', level=logging.INFO)
     n = 1000
     iterations = n
     data = [i for i in range(1, n + 1)]

@@ -27,11 +27,6 @@ swaps = *10000*
 
 ![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/size10000swaps10000)
 
-sigma(k)
-k = [10, 25]
-
-![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/k10to25)
-
 ## Part 2
 *Cooler API*
 
@@ -43,3 +38,18 @@ data in this project:
 
 `wget ftp://cooler.csail.mit.edu/coolers/hg19/Rao2014-IMR90-MboI-allreps-filtered.500kb.cool
 `
+Plots:
+
+range k = 1..10
+
+**E**(k)
+
+![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/chr1_EX_k_1_10)
+
+**D**(k)
+
+![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/chr1_DX_k_1_10)
+
+**SIGMA**(k)
+
+![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/chr1_SIGMA_k_1_10)

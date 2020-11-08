@@ -1,7 +1,6 @@
 from math import sqrt
 
 import logging
-import cooler
 
 
 def check_symmetry(mtx):
@@ -60,24 +59,31 @@ Pre: list1.size() == list2.size()
 """
 
 
-def count_ev(bottom, upper):
-    cnt = len(bottom)
-    return (sum(bottom) + sum(upper)) / (2 * cnt)
+def count_ev(arr):
+    cnt = len(arr)
+    return sum(arr) / cnt
+
+
+"""
+Pre: mat is symmetrical
+"""
 
 
 def expected_avg_on_k(mat, k):
-    bottom = get_bottom_k_diagonal(mat, k)
     upper = get_upper_k_diagonal(mat, k)
-    return count_ev(bottom, upper)
+    return count_ev(upper)
+
+
+"""
+Pre: mat is symmetrical
+"""
 
 
 def dispersion_avg_on_k(mat, k):
-    bottom = get_bottom_k_diagonal(mat, k)
     upper = get_upper_k_diagonal(mat, k)
-    bottom2 = [*map(lambda x: x ** 2, bottom)]
     upper2 = [*map(lambda x: x ** 2, upper)]
-    ev2 = count_ev(bottom2, upper2)
-    ev = count_ev(bottom, upper)
+    ev2 = count_ev(upper2)
+    ev = count_ev(upper)
     dispersion = ev2 - (ev ** 2)
     return dispersion
 
@@ -87,15 +93,14 @@ Pre: k < len(matrix)
 """
 
 
-def process_cool(filepath, k=10):
-    logging.basicConfig(filename="logs/cooler.log", level=logging.INFO)
-    c = cooler.Cooler(filepath)
-    mat = c.matrix(balance=False)[:, :]
-    logging.info(f'symmetry: {check_symmetry(mat)}')
-    assert len(mat) > k > 0, "k should be in ( 0 ; len(matrix) )"
-    expec = expected_avg_on_k(mat, k)
-    disp = dispersion_avg_on_k(mat, k)
+def process_cool(contact_matrix, k=10):
+    logging.info(f'symmetry: {check_symmetry(contact_matrix)}')
+    assert len(contact_matrix) > k > 0, "k should be in ( 0 ; len(matrix) )"
+
+    expec = expected_avg_on_k(contact_matrix, k)
+    disp = dispersion_avg_on_k(contact_matrix, k)
     sigma = sqrt(disp)
+
     logging.info('k is r(i, j): such points as (i, i + k), (i, i - k)')
     logging.info(f'k := {k}')
     logging.info(f'EX = {expec}')
@@ -104,4 +109,5 @@ def process_cool(filepath, k=10):
     logging.info('3-sigma rule:')
     logging.info('with >= 8/9 probability (i,j) blocks have')
     logging.info(f'[{max(0, expec - 3 * sigma)}; {expec + 3 * sigma}] connections')
-    return sigma
+
+    return expec, disp, sigma
