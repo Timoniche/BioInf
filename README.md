@@ -94,7 +94,6 @@ https://github.com/Timoniche/BioInf/blob/main/interview_hic_problem.pdf
 
 *getting contact matrix*
 
-https://github.com/Timoniche/BioInf/blob/main/log/part3.log
-
+https://github.com/Timoniche/BioInf/blob/main/logs/part3.log
 
 
