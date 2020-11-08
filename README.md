@@ -85,3 +85,11 @@ https://github.com/Timoniche/BioInf/blob/main/interview_hic_problem
 
 ![alt text](https://github.com/Timoniche/BioInf/blob/main/solutions/solution_max_t.png)
 
+**3.2** Разбить хромосому на 1000 равных бинов по 500 Kb , и 
+построить матрицу расстояний между центрами бинов.
+
+*getting bin centers:*
+
+![alt text](https://github.com/Timoniche/BioInf/blob/main/solutions/bin_centers.jpg)
+
+
