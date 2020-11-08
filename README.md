@@ -70,7 +70,7 @@ range k = *10..25*
 
 ## Part 3
 
-https://github.com/Timoniche/BioInf/blob/main/interview_hic_problem
+https://github.com/Timoniche/BioInf/blob/main/interview_hic_problem.pdf
 
 **3.1** Параметризовать эту кривую, то есть записать ее уравнение в виде (x(t), y(t)) 
 (или написать скрипт, который рисует такую кривую).
@@ -91,5 +91,10 @@ https://github.com/Timoniche/BioInf/blob/main/interview_hic_problem
 *getting bin centers:*
 
 ![alt text](https://github.com/Timoniche/BioInf/blob/main/solutions/bin_centers.jpg)
+
+*getting contact matrix*
+
+https://github.com/Timoniche/BioInf/blob/main/log/part3.log
+
 
 

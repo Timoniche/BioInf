@@ -1,5 +1,6 @@
 import math
 import turtle
+import logging
 
 """
 r = k * t
@@ -80,15 +81,27 @@ def get_approximate_centers():
     return centers
 
 
+def dist(x1, y1, x2, y2):
+    return math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
+
+
 def count_contact_matrix():
-    contact_matrix = [[0 for _ in range(bins_cnt)] for _ in range(bins_cnt)]
+    contact_matrix = [[0.0 for _ in range(bins_cnt)] for _ in range(bins_cnt)]
+    centers = get_approximate_centers()
+    for i in range(bins_cnt):
+        for j in range(i + 1, bins_cnt):
+            fst = centers[i]
+            snd = centers[j]
+            contact_matrix[i][j] = contact_matrix[j][i] = dist(fst[0], fst[1], snd[0], snd[1])
     return contact_matrix
 
 
 def main():
+    logging.basicConfig(filename='logs/part3.log', filemode='w', level=logging.INFO)
     gen_spiral(with_bin_centers=False)
-    # print(count_contact_matrix())
-    # print(get_approximate_centers())
+    logging.info('spiral is drawn')
+    contact_matrix = count_contact_matrix()[:3]
+    logging.info(f'count_contact_matrix:\n{contact_matrix}')
 
 
 if __name__ == '__main__':
