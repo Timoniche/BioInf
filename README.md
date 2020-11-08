@@ -77,7 +77,11 @@ https://github.com/Timoniche/BioInf/blob/main/interview_hic_problem
 
 ![](https://github.com/Timoniche/BioInf/blob/main/solutions/gif_task3.gif)
 
-solution of the equation
+*getting the relation:*
+
+![alt text](https://github.com/Timoniche/BioInf/blob/main/solutions/archimedean.jpg)
+
+*solution of the equation (using wolfram):*
 
 ![alt text](https://github.com/Timoniche/BioInf/blob/main/solutions/solution_max_t.png)
 
