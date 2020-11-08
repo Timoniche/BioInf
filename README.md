@@ -67,3 +67,17 @@ range k = *10..25*
 **SIGMA**(k)
 
 ![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/chr1_SIGMA_k_10_25)
+
+## Part 3
+
+https://github.com/Timoniche/BioInf/blob/main/interview_hic_problem
+
+**3.1** Параметризовать эту кривую, то есть записать ее уравнение в виде (x(t), y(t)) 
+(или написать скрипт, который рисует такую кривую).
+
+![](https://github.com/Timoniche/BioInf/blob/main/solutions/gif_task3)
+
+solution of the equation
+
+![alt text](https://github.com/Timoniche/BioInf/blob/main/solutions/solution_max_t)
+
