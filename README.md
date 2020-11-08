@@ -75,9 +75,9 @@ https://github.com/Timoniche/BioInf/blob/main/interview_hic_problem
 **3.1** Параметризовать эту кривую, то есть записать ее уравнение в виде (x(t), y(t)) 
 (или написать скрипт, который рисует такую кривую).
 
-![](https://github.com/Timoniche/BioInf/blob/main/solutions/gif_task3)
+![](https://github.com/Timoniche/BioInf/blob/main/solutions/gif_task3.gif)
 
 solution of the equation
 
-![alt text](https://github.com/Timoniche/BioInf/blob/main/solutions/solution_max_t)
+![alt text](https://github.com/Timoniche/BioInf/blob/main/solutions/solution_max_t.png)
 
