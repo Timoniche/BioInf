@@ -1,6 +1,10 @@
 import math
 import turtle
 import logging
+import numpy as np
+import matplotlib.pyplot as plt
+
+from main_cool_part2 import theory
 
 """
 r = k * t
@@ -85,23 +89,50 @@ def dist(x1, y1, x2, y2):
     return math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
 
 
-def count_contact_matrix():
-    contact_matrix = [[0.0 for _ in range(bins_cnt)] for _ in range(bins_cnt)]
+def count_dist_matrix():
+    contact_matrix = np.array([[0.0 for _ in range(bins_cnt)] for _ in range(bins_cnt)])
     centers = get_approximate_centers()
     for i in range(bins_cnt):
-        for j in range(i + 1, bins_cnt):
+        for j in range(i + 1, bins_cnt):  # from i + 1 as i already == 0
             fst = centers[i]
             snd = centers[j]
             contact_matrix[i][j] = contact_matrix[j][i] = dist(fst[0], fst[1], snd[0], snd[1])
     return contact_matrix
 
 
+def gen_hic(contact_matrix):
+    ev_k = theory(filepath='data/Rao2014-IMR90-MboI-allreps-filtered.500kb.cool')
+    hic = np.array([[0.0 for _ in range(bins_cnt)] for _ in range(bins_cnt)])
+
+    dist_bins = (85 / 1000) / 499 # length (metres) / count_bins_chr1
+
+    # print(dist_bins_part2 * 1000)
+    for i in range(bins_cnt):
+        for j in range(bins_cnt):
+            dist_meters = contact_matrix[i][j]
+            dist_k = round(dist_meters / dist_bins)
+            if 10 < dist_k <= 498:
+                hic[i][j] = hic[j][i] = ev_k[dist_k]
+    return hic
+
+
 def main():
     logging.basicConfig(filename='logs/part3.log', filemode='w', level=logging.INFO)
-    gen_spiral(with_bin_centers=False)
-    logging.info('spiral is drawn')
-    contact_matrix = count_contact_matrix()[:3]
-    logging.info(f'count_contact_matrix:\n{contact_matrix}')
+    # gen_spiral(with_bin_centers=False)
+    # logging.info('spiral is drawn')
+
+    # contact_matrix = count_contact_matrix()[:3]
+    # logging.info(f'count_contact_matrix:\n{contact_matrix}')
+    contact_matrix = count_dist_matrix()
+    plt.title('dist matrix')
+    plt.imshow(contact_matrix, cmap='hot', interpolation='nearest')
+    plt.show()
+
+    hic = gen_hic(contact_matrix)
+    # hic = gen_hic(contact_matrix)
+    plt.title('hic')
+    plt.imshow(hic, cmap='hot', interpolation='nearest')
+    plt.show()
 
 
 if __name__ == '__main__':

@@ -92,8 +92,11 @@ https://github.com/Timoniche/BioInf/blob/main/interview_hic_problem.pdf
 
 ![alt text](https://github.com/Timoniche/BioInf/blob/main/solutions/bin_centers.jpg)
 
-*getting contact matrix*
+*getting distance matrix*
 
-https://github.com/Timoniche/BioInf/blob/main/logs/part3.log
+![alt text](https://github.com/Timoniche/BioInf/blob/main/solutions/part3_distances)
 
+*building hic with same E for k (not random),
+k from 0 to 10 dropped due to the big gap*
 
+![alt text](https://github.com/Timoniche/BioInf/blob/main/solutions/hic_k_11_499_not_random)

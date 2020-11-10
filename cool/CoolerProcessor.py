@@ -95,7 +95,8 @@ Pre: k < len(matrix)
 
 def process_cool(contact_matrix, k=10):
     logging.info(f'symmetry: {check_symmetry(contact_matrix)}')
-    assert len(contact_matrix) > k > 0, "k should be in ( 0 ; len(matrix) )"
+    # assert len(contact_matrix) > k > 0, "k should be in ( 0 ; len(matrix) )"
+    assert len(contact_matrix) > k, "k should be in [ 0 ; len(matrix) )" # so far for task 3
 
     expec = expected_avg_on_k(contact_matrix, k)
     disp = dispersion_avg_on_k(contact_matrix, k)
