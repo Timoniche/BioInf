@@ -24,6 +24,7 @@ import matplotlib.pyplot as plt
 #     plt.show()
 
 
+
 def theory(filepath):
     logging.basicConfig(filename='logs/theory.log', filemode='w', level=logging.INFO)
     c = cooler.Cooler(filepath)

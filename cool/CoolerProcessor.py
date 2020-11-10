@@ -1,6 +1,11 @@
+import math
 from math import sqrt
+from matplotlib import pyplot as plt
 
 import logging
+
+import cooler
+from numpy import np
 
 
 def check_symmetry(mtx):
@@ -87,6 +92,15 @@ def dispersion_avg_on_k(mat, k):
     dispersion = ev2 - (ev ** 2)
     return dispersion
 
+
+def histogramm(filepath, k=11):
+    c = cooler.Cooler(filepath)
+    bin_size = 500000
+    count_bins_chr1 = math.ceil(c.chromsizes[0] / bin_size)
+    contact_matrix = c.matrix(balance=False)[:count_bins_chr1, :count_bins_chr1]
+    diag = get_upper_k_diagonal(contact_matrix, k)
+    hist = np.histogram(np.array(diag))
+    plt.hist(hist)
 
 """
 Pre: k < len(matrix)
