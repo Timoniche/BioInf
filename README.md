@@ -1,5 +1,7 @@
 # Bioinformatics
 
+https://github.com/Timoniche/BioInf/blob/main/report.ipynb
+
 ## Part 1 
 *how random 2-breaks differ with min swap solution*
 
