@@ -93,7 +93,7 @@ def count_dist_matrix():
     contact_matrix = np.array([[0.0 for _ in range(bins_cnt)] for _ in range(bins_cnt)])
     centers = get_approximate_centers()
     for i in range(bins_cnt):
-        for j in range(i + 1, bins_cnt):  # from i + 1 as i already == 0
+        for j in range(i + 1, bins_cnt):  # from i + 1 as i is already == 0
             fst = centers[i]
             snd = centers[j]
             contact_matrix[i][j] = contact_matrix[j][i] = dist(fst[0], fst[1], snd[0], snd[1])
