@@ -100,17 +100,20 @@ def count_dist_matrix():
     return contact_matrix
 
 
-def gen_hic(contact_matrix):
+def meters_to_bin(dist_meters):
+    bin_meter = (85 / 1000) / 499  # возьмем точнее, чем 0.17мм из условия
+    return round(dist_meters / bin_meter)
+
+
+def gen_hic(dist_matrix):
     ev_k = theory(filepath='data/Rao2014-IMR90-MboI-allreps-filtered.500kb.cool')
     hic = np.array([[0.0 for _ in range(bins_cnt)] for _ in range(bins_cnt)])
-
-    dist_bins = (85 / 1000) / 499 # length (metres) / count_bins_chr1
 
     # print(dist_bins_part2 * 1000)
     for i in range(bins_cnt):
         for j in range(bins_cnt):
-            dist_meters = contact_matrix[i][j]
-            dist_k = round(dist_meters / dist_bins)
+            dist_meters = dist_matrix[i][j]
+            dist_k = meters_to_bin(dist_meters)
             if 10 < dist_k <= 498:
                 hic[i][j] = hic[j][i] = ev_k[dist_k]
     return hic
