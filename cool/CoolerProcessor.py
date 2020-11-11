@@ -93,7 +93,7 @@ def dispersion_avg_on_k(mat, k):
     return dispersion
 
 
-def histogramm(filepath, k=11):
+def histogram(filepath, k=11):
     c = cooler.Cooler(filepath)
     bin_size = 500000
     count_bins_chr1 = math.ceil(c.chromsizes[0] / bin_size)
