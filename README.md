@@ -2,6 +2,10 @@
 
 https://github.com/Timoniche/BioInf/blob/main/report.ipynb
 
+**references:**
+https://www.sciencedirect.com/science/article/pii/S1046202314003582?via%3Dihub
+
+https://biologicalproceduresonline.biomedcentral.com/articles/10.1186/s12575-019-0094-0
 ## Part 1 
 *how random 2-breaks differ with min swap solution*
 
