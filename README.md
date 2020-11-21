@@ -7,6 +7,12 @@ https://github.com/Timoniche/BioInf/blob/main/report.ipynb
 https://www.sciencedirect.com/science/article/pii/S1046202314003582?via%3Dihub
 
 https://biologicalproceduresonline.biomedcentral.com/articles/10.1186/s12575-019-0094-0
+
+**useful links:**
+
+*To generate .pdb 3D model from Hi-C:* https://github.com/BDM-Lab/3DMax
+
+*PyMOL to open 3DMax gened .pdb files:* https://pymol.org/2/
 ## Part 1 
 *how random 2-breaks differ with min swap solution*
 
@@ -107,3 +113,10 @@ https://github.com/Timoniche/BioInf/blob/main/interview_hic_problem.pdf
 k from 0 to 10 dropped due to the big gap*
 
 ![alt text](https://github.com/Timoniche/BioInf/blob/main/plots/hic_k_11_499_not_random)
+
+## Part 4
+
+Generated .pdb 3D model from Hi-C using 3DMax, opened with PyMOL (see useful links)
+
+![alt text](https://github.com/Timoniche/BioInf/blob/main/pictures/chr1_pic.png)
+
